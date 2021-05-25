@@ -13,13 +13,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
+    <tr *ngFor="let user of users">
+      <td>{{user.firsName}}</td>
+      <td>{{user.secondName}}</td>
+      <td>{{user.firsSurname}}</td>
+      <td>{{user.secondSurname}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.adrres}}</td>
     </tr>
 
   </tbody>

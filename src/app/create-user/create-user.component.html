@@ -1,0 +1,58 @@
+<div class="clear"></div>
+<h1>Crear Nuevo Usuario</h1>
+
+<form class="form-horizontal main-form" >
+  <div *ngIf="!isValide"class="alert alert-danger">
+    <strong>Danger!</strong> {{message}}.
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="firsName"><span class="required">*</span>Primer Nombre:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="firsName" id="firsName" [(ngModel)]="user.firsName" placeholder="Ingrese su Primer Nombre">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="secondName">Segundo Nombre:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  name="secondName"id="secondNames" [(ngModel)]="user.secondName" placeholder="Ingrese su Segundo Nombre">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="firsSurname"><span class="required">*</span>Primer Apellido:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="firsSurname" id="firsSurname" [(ngModel)]="user.firsSurname" placeholder="Ingrese su primer Apellido">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="secondSurname">Segundo Apellido :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="secondSurname" id="secondSurname" [(ngModel)]="user.secondSurname" placeholder="Ingrese su Segundo Apellido">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="phone">Telefono</label>
+    <div class="col-sm-10">
+      <input type="tel" class="form-control" name="phone" id="phone" [(ngModel)]="user.phone" placeholder="Ingrese su Numero Telefonico">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="adrres"><span class="required">*</span>Direccion</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="adrres" id="adrres" [(ngModel)]="user.adrres" placeholder="Ingrese su Direccion">
+    </div>
+  </div>
+<h1>
+
+</h1>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" (click)="saveOrUdpdate()" class="btn btn-primary btn-save">Guardar</button>
+    </div>
+  </div>
+</form>
